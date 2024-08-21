@@ -1,0 +1,6 @@
+# Sync On-prem to Google Cloud
+GCDS - Google Cloud Directory Sync Tool uses Cron job on daily schedule, right after updates are made in AD.
+|
+Service Accounts are used as identities to mange access to workloads. 
+- A sec.eng or sec team will be given access to the Service account that manages SIEM workload.
+|
