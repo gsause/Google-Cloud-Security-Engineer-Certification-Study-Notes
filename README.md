@@ -1,4 +1,103 @@
 # Google-Cloud-Security-Engineer-Certification-Study-Notes
+Here’s a cheat sheet for the **Google Cloud Security Engineer Certification** based on your notes:
+
+---
+
+### **Key Concepts**
+
+- **Cloud Computing Traits**: Resources over the internet, self-service, scalable, pay-as-you-go.
+- **GCP Resource Hierarchy**: Organization → Folders → Projects → Resources.
+- **IAM Roles**: Best practice is to assign roles to groups rather than individuals.
+
+---
+
+### **Google Cloud Services**
+
+- **Storage**: 
+  - **Cloud Storage** (Blob): Standard (hot), Nearline (30 days), Coldline (90 days), Archive (365 days).
+  - **Transfer Options**: Storage Transfer Service (batch), Transfer Appliance (physical, PB-scale).
+  - **Cloud SQL**: Managed SQL, up to 64TB, handles online transactions.
+  - **Spanner**: Relational database, high throughput, scalable.
+  - **Bigtable**: NoSQL, high-volume, low-latency.
+
+- **Networking**:
+  - **VPC (Virtual Private Cloud)**: Default is in auto mode with a subnet in each region.
+  - **VPC Peering**: For private communication between VPCs (RFC1918 space).
+  - **Shared VPC (XPN)**: Share VPC resources across projects.
+  - **Load Balancers**: Regional External Passthrough (UDP traffic).
+  - **VPN**: Securely connects on-premises to VPC (IPsec).
+  - **Cloud Interconnect**: High-bandwidth, low-latency private connection to Google’s network.
+  - **Cloud DNS**: Supports weighted round-robin, geo-location, private zones.
+
+- **Security**:
+  - **IAM & Policies**: Custom roles can't be applied to folder level; firewall rules are applied via service accounts.
+  - **Cloud Identity**: Manages users (like AD).
+  - **Cloud Armour**: Web Application Firewall (WAF) with pre-configured rules.
+  - **VPC Service Controls**: Security perimeter for sensitive data.
+  - **Access Approval & Transparency**: Explicit consent required for Google support access to data.
+  - **Key Management**:
+    - **Customer-supplied encryption keys (CSEK)**.
+    - **Customer-managed keys (CMSK)**.
+    - **Cloud External Key Manager (EKM)**.
+
+- **Edge & Data Services**:
+  - **Cloud CDN**: Edge caching for faster content delivery.
+  - **BigQuery**: Scalable data warehouse for real-time analytics.
+  - **Kubernetes (GKE)**: Container management service, decouples apps from underlying infrastructure.
+
+---
+
+### **Best Practices**
+
+- **Security**:
+  - **Zero Trust Network Model**: Security at every layer; use VPNs, VPC Service Controls.
+  - **Disable Default Network**: Minimize attack surface.
+  - **Automate Infrastructure**: Ensure secure and consistent provisioning.
+  - **Firewall Rules**: Use service account rules instead of tag-based rules.
+
+- **Infrastructure**:
+  - **Load Balancers**: Regional External for UDP traffic.
+  - **Dedicated Interconnect**: High-bandwidth, low-latency connection to colocation facilities.
+  - **VPC Peering/VPN**: Use for internal traffic between VPCs.
+  - **Private Google Access**: For internal API access without public IPs.
+
+---
+
+### **Cloud Functions & Automation**
+
+- **Cloud Functions**: Serverless compute, responsible only for the code.
+- **Infrastructure as Code**: Automate provisioning for security and consistency.
+
+---
+
+### **Monitoring & Logging**
+
+- **Cloud Monitoring**: Tracks infrastructure and application health via metrics, events, dashboards.
+  - **SLI (Service Level Indicator)**: Measures reliability (e.g., good events/total events).
+  - **SLO (Service Level Objective)**: Sets reliability targets (e.g., 99.9% uptime).
+  - **SLA (Service Level Agreement)**: Formal commitment to customers about uptime.
+- **Cloud Logging**: Collect, analyze, and alert on logs.
+
+---
+
+### **Additional Services**
+
+- **Cloud IDS**: Intrusion detection with packet mirroring and threat protection.
+- **Artifact Registry**: Stores container images for approved deployment.
+- **Profiler**: Creates flame graphs to analyze resource usage.
+
+---
+
+### **Common Architectures**
+
+- **Shared VPC Admin**: Delegates tasks to network and security admins.
+- **HAP-VPN**: Use for secure, highly available connections.
+- **Cross-Cloud Interconnect**: For GCP-Azure data transfer.
+- **API Communication**: Use Google APIs via REST calls.
+
+---
+
+This cheat sheet covers the essential topics needed for the **Google Cloud Security Engineer Certification** exam, focusing on infrastructure, security, and best practices.
 
 design and implement secure workloads and infrastructure on Google Cloud.
 
