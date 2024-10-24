@@ -1,5 +1,5 @@
 # Google-Cloud-Security-Engineer-Certification-Study-Notes
-Here’s a cheat sheet for the **Google Cloud Security Engineer Certification** based on your notes:
+Here’s a cheat sheet for the **Google Cloud Security Engineer Certification** based on my below notes:
 
 ---
 
