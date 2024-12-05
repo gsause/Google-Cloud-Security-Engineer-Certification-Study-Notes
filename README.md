@@ -60,6 +60,8 @@ Here’s a cheat sheet for the **Google Cloud Security Engineer Certification** 
   - **Dedicated Interconnect**: High-bandwidth, low-latency connection to colocation facilities.
   - **VPC Peering/VPN**: Use for internal traffic between VPCs.
   - **Private Google Access**: For internal API access without public IPs.
+  - *default, all services are accessed via public ip (internet).
+  - **Private Service Connect**: Connects third party managed service using private IP.
 
 ---
 
